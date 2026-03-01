@@ -33,5 +33,8 @@ async def update_settings(
     
     if not result:
         raise HTTPException(status_code=404, detail="Settings not found")
+        ALLOWED HOSTS = ['*']
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     
     return serialize_doc(result)
+    
